@@ -20,3 +20,5 @@ $ docker run \
   --mount type=volume,source=grafana-conf,destination=/etc/grafana \
   anberra/grafana-armv7
 ```
+
+Dockerfile is ready to run in any x86 CPU whereas Dockerfile.arm is intended to run in a ARMv7 CPU like Raspberry Pi.
