@@ -18,6 +18,7 @@ $ docker run \
   --name=grafana \
   --mount type=volume,source=grafana-lib,destination=/var/lib/grafana \
   --mount type=volume,source=grafana-conf,destination=/etc/grafana \
+  --restart=unless-stopped \
   anberra/grafana-armv7
 ```
 
