@@ -4,15 +4,15 @@ FROM balenalib/armv7hf-debian
 MAINTAINER andres.bermejo@gmail.com
 
 # extra metadata
-LABEL version="6.7.2"
+LABEL version="7.1.5"
 LABEL description="Image with Grafana for armv7"
 ADD VERSION .
 
 # variables
-ARG PKG_NAME="6.7.2"
+ARG PKG_NAME="7.1.5"
 ARG GF_UID="472"
 ARG GF_GID="472"
-ARG DEB_FILE="grafana_${PKG_NAME}_armhf.deb"
+ARG DEB_FILE="grafana-rpi_${PKG_NAME}_armhf.deb"
 
 # env
 ENV GRAFANA_URL="https://dl.grafana.com/oss/release/$DEB_FILE" \
@@ -32,6 +32,7 @@ RUN [ "cross-build-start" ]
 RUN apt-get update && apt-get install -y \
         curl \
         libfontconfig \
+        libfontconfig1 \
         && rm -rf /var/lib/apt/lists/*
 
 # deploy
