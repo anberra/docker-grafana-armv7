@@ -4,12 +4,12 @@ FROM balenalib/armv7hf-debian
 MAINTAINER andres.bermejo@gmail.com
 
 # extra metadata
-LABEL version="7.1.5"
+LABEL version="8.5.1"
 LABEL description="Image with Grafana for armv7"
 ADD VERSION .
 
 # variables
-ARG PKG_NAME="7.1.5"
+ARG PKG_NAME="8.5.1"
 ARG GF_UID="472"
 ARG GF_GID="472"
 ARG DEB_FILE="grafana-rpi_${PKG_NAME}_armhf.deb"
